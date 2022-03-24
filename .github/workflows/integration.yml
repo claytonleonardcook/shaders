@@ -1,14 +1,14 @@
-name: ⚡ CI/CD 🚀
+name: ⚡ Continuous Integration
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - '**'
+      - '!main'
 
 jobs:
-  integration-deployment:
-    name: ⚡ Integration & Deployment 🚀
+  integration:
+    name: ⚡ Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -17,10 +17,3 @@ jobs:
         run: npm install
       - name: Unit Tests 🎉
         run: npm run test
-      - name: Build React Project 🛠️
-        run: npm run build
-      - name: Deploy to GitHub Pages 📄
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build
