@@ -20,3 +20,8 @@ code {
 #root {
   height: 100vh;
 }
+
+svg.svg-inline--fa {
+  aspect-ratio: 1/1;
+  height: 100%;
+}
