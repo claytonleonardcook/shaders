@@ -1,6 +1,5 @@
-import Header from "./Header";
 import Footer from "./Footer";
-import Content from "./Content";
+import Navbar from "./Navbar";
 
 type Props = {
   children: JSX.Element;
@@ -9,8 +8,8 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <div className="content h-full flex flex-col">
-      <Header />
-      <Content>{children}</Content>
+      <Navbar />
+      <main className="flex-grow">{children}</main>
       <Footer />
     </div>
   );
